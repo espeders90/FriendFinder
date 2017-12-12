@@ -1,4 +1,4 @@
-[{
+var friends = [{
         "name": "Daenerys Targaryen",
         "photo": "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwij6N3-j4PYAhWIPhQKHRdzBhUQjBwIBA&url=https%3A%2F%2Fwww.hbo.com%2Fcontent%2Fdam%2Fhbodata%2Fseries%2Fgame-of-thrones%2Fcharacter%2Fs5%2Fdaenarys-1920.jpg%2F_jcr_content%2Frenditions%2Fcq5dam.web.1200.675.jpeg&psig=AOvVaw2it-xuR18BUVAPiaW2TNTE&ust=1513121756111697",
         "scores": [2, 2, 3, 1, 5, 1, 4, 2, 1, 3]
@@ -24,3 +24,5 @@
         "scores": [5, 2, 2, 1, 5, 3, 4, 1, 1, 3]
     },
 ];
+
+module.exports = friends;
