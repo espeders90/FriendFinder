@@ -1,7 +1,7 @@
 // GET Route with URL /api/friends
 // POST Route /api/friends
 
-var friends = requrie("../data/friends");
+var friends = require("../data/friends");
 
 // Routing
 
@@ -17,10 +17,8 @@ module.exports = function(app) {
     });
 };
 
-app.post("/api/clear", function() {
-    // Empty out the arrays of data
-    friends = [];
-
-
-    console.log(friends);
-});
+// app.post("/api/clear", function() {
+//     // Empty out the arrays of data
+//     friends = [];
+//     console.log(friends);
+// });
