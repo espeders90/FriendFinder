@@ -37,25 +37,25 @@ module.exports = function(app) {
         var inputPhoto = input.photo;
         var inputScore = input.score;
 
-        var result = 0;
+        var totalDifference = 0;
 
         // Looping through all possible matches in the friends list
 
         for (var i = 0; i < friends.length; i++) {
 
             console.log(friends[i].name);
-            result = 0;
+            totalDifference = 0;
 
             // looping individual scores
             for (var j = 0; j < friends[i].scores[j]; j++) {
 
-                result += Math.abs(parseInt(inputScore[j]) - parseInt(friends[i].scores[j]));
+                totalDifference += Math.abs(parseInt(inputScore[j]) - parseInt(friends[i].scores[j]));
 
-                if (result <= Match.score) {
+                if (totalDifference <= Match.score) {
 
                     Match.name = friends[i].name;
                     Match.photo = friends[i].photo;
-                    Match.score = result;
+                    Match.score = totalDifference;
                 }
             }
         }

@@ -19,36 +19,82 @@
   
   <body>
       
-<div class="jumbotron">
-    <div class="container">
-      <h1>Survey Questions</h1>
-      
-     <strong><h2>About You</h2></strong> 
-     <h3>Name (required)</h3>
-     <div class="input-group">
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-  
-</div>
+    <div class="jumbotron">
+        <div class="container">
+          <h1>Survey Questions</h1>
+          
+         <strong><h2>About You</h2></strong> 
+         <h3>Name </h3>
+         <div class="input-group">
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="name">
+      <br>
+      <h4>Photo </h4>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="photo">
+        </div>
+            <strong><h4>Question 1</h4></strong>
+                <h5>You consider yourself an outgoing person.</h5>
+            <select data-placeholder="" class="custom-select" id="Q1" >
+              <option selected>Open this select menu</option>
+              <option value="1">Strongly Disagree</option>
+              <option value="2">Disagree</option>
+              <option value="3">Neutral</option>
+              <option value="4">Agree</option>
+              <option value="5">Strongly Agree</option>
+            </select>
+            
+            <strong><h4>Question 2</h4></strong>
+                <h5>You enjoy being a leader of a team</h5>
+            <select data-placeholder="" class="custom-select" id="Q2">
+              <option selected>Open this select menu</option>
+              <option value="1">Strongly Disagree</option>
+              <option value="2">Disagree</option>
+              <option value="3">Neutral</option>
+              <option value="4">Agree</option>
+              <option value="5">Strongly Agree</option>
+            </select>
+            
+            <strong><h4>Question 3</h4></strong>
+                <h5>You do not mind telling people the truth</h5>
+            <select data-placeholder="" class="custom-select" id="Q3">
+              <option selected>Open this select menu</option>
+              <option value="1">Strongly Disagree</option>
+              <option value="2">Disagree</option>
+              <option value="3">Neutral</option>
+              <option value="4">Agree</option>
+              <option value="5">Strongly Agree</option>
+            </select>
+            
+            <strong><h4>Question 4</h4></strong>
+                <h5>Social life is more important than my career</h5>
+            <select data-placeholder="" class="custom-select" id="Q4">
+              <option selected>Open this select menu</option>
+              <option value="1">Strongly Disagree</option>
+              <option value="2">Disagree</option>
+              <option value="3">Neutral</option>
+              <option value="4">Agree</option>
+              <option value="5">Strongly Agree</option>
+            </select>
+            
+            <strong><h4>Question 5</h4></strong>
+                <h5>I consider myself physically active</h5>
+            <select data-placeholder="" class="custom-select" id="Q5">
+              <option selected>Open this select menu</option>
+              <option value="1">Strongly Disagree</option>
+              <option value="2">Disagree</option>
+              <option value="3">Neutral</option>
+              <option value="4">Agree</option>
+              <option value="5">Strongly Agree</option>
+            </select>
+            
          
-     </div>
-     
-      
-      
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Submit</a></p>
-     </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+         </div>
+          <p><a class="btn btn-primary btn-lg" id="submit" href="#" role="button">Submit</a></p>
+    </div>
+<script type="text/javascript">
+    // $("submit").on("click", function() {
+    //    ...
+    //}
+</script>
 
   </body>
+</html>
