@@ -4,7 +4,7 @@ var path = require("path");
 
 // server setup (HotRestaurant)
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
