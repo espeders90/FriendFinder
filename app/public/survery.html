@@ -90,10 +90,29 @@
          </div>
           <p><a class="btn btn-primary btn-lg" id="submit" href="#" role="button">Submit</a></p>
     </div>
+    
 <script type="text/javascript">
-    // $("submit").on("click", function() {
-    //    ...
-    //}
+    $("submit").on("click", function() {
+      event.preventDefault();
+    
+    
+    //create object for input
+    var userInput = {
+      name: $("#name").val(),
+      photo: $("#photo").val(),
+      scores: [$("#Q1").val(),$("#Q2").val(),$("#Q3").val(),$("#Q4").val(),$("#Q5").val()]
+    }
+    // connect with the website  
+    var URL = window.location.origin;
+    
+    //POST method to friends file
+    $.post(URL + "./api/friends", userInput, function(data) {
+      $("#")
+    })
+    
+    
+    
+    });
 </script>
 
   </body>
