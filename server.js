@@ -1,22 +1,31 @@
+// Dependencies
+// =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 
-// server setup (HotRestaurant)
+
+// Sets up the Express App
+// =============================================================
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
-// data parsing
-app.use(bodyParser.urlencoded({ extended: false }));
+// Sets up the Express app to handle data parsing
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// app.use(express.static("app/public"));
 
-// routing
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+app.use(express.static(path.join(__dirname, '/app/public')));
 
-// listener
+var initHtmlRoutes = require("./app/routing/htmlRoutes");
+initHtmlRoutes(app);
+var initApiRoutes = require("./app/routing/apiRoutes");
+initApiRoutes(app);
+
+// Starts the server to begin listening
+// =============================================================
 app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+    console.log("App listening on PORT " + PORT);
 });
